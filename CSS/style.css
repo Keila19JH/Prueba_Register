@@ -1,0 +1,537 @@
+/* Estilos específicos para tabletas */
+@media (max-width: 768px) {
+
+    .gender-option {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* Ajustes de estilos para tabletas */
+    .header-container {
+        max-width: 90%;
+        /* Reducir el ancho máximo del header en tabletas */
+    }
+
+    .card-container {
+        height: auto;
+        /* Ajustar la altura de la tarjeta automáticamente en tabletas */
+    }
+
+    .card {
+        padding: 15px;
+        /* Reducir el espacio interior de la tarjeta en tabletas */
+    }
+}
+
+html,
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(252, 251, 251);
+}
+
+.cuestionario {
+    margin-bottom: 70px;
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+    background-color: rgb(67,24,42);
+    color: aliceblue;
+    margin-top: 0;
+    font-size: 25px;
+    font-family: 'Montserrat', 'sans-serif';
+    width: 100%;
+}
+
+#botonAnterior2,
+#botonAnterior3,
+#botonAnterior4,
+#botonAnterior5,
+#botonAnterior6,
+#botonAnterior7,
+#botonAnterior8,
+#botonAnterior9,
+#botonAnterior10,
+#botonAnterior11,
+#botonAnterior12 {
+    position: absolute;
+    left: 0;
+    font-size: 10px;
+    margin: .75px;
+}
+
+
+
+#gender, #ageUser, #satisfaction_attention, #timeAtt, #typeService, 
+#tipoConsultaExterna, .consultaExtAdultos, .consultaExtPediatrica, 
+.unidadApoyo, .clinicas, .auxiliares, .DQReceiveAbuse, .typeStaff, 
+.DQTreatmentFriendly, .satisfactionMedicalCare, .nursingSatisfaction, 
+.orientationContinuity, .patientRights, .satisfactionCleaning, 
+.satisfactionExperienceHRAEI, .feedbackSection, 
+.floors, .firstFloor_Service, .secondFloor_Service, .thirdFloor_Service, 
+.fourthFloor_Service, .nurseExplication_care, .satisfaction_foodHospitalization {
+    display: none;
+}
+
+
+.satisfaction_attention.active, 
+.timeAtt.active {
+    display: block; /* Se muestra solo la activa */
+}
+
+
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 25px 45px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(98,19,51);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+
+/*Estos son los estilos del botón iniciar encuesta*/
+.button-container {
+    display: block;
+    margin: 20px auto;
+    padding: 25px 45px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.button-link {
+    background-color: rgb(98,19,51);
+    color: #fff;
+    padding: 50px 75px;
+    /* Aumentar el padding vertical para hacer el botón más alto */
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 160px; /* Ajusta el valor para bajar el botón */
+}
+
+.button-link:hover {
+    background-color: rgb(139, 24, 55);
+    /* Cambiar color al pasar el mouse por encima */
+}
+
+
+/* Aquí inician los estilos de las cards*/
+/* Estilos para las tarjetas */
+
+.gender-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 20px;
+}
+
+.age-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 20px;
+}
+
+.attention-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Centra verticalmente las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se ajusten automáticamente en una fila */
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px;
+    /* Ancho de las tarjetas */
+    height: 200px;
+    /* Altura de las tarjetas */
+    border-radius: 50px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+    /* Margen alrededor de las tarjetas */
+    position: relative;
+    transition: transform 0.3s ease;
+    /* Transición para el efecto de zoom in */
+    --bs-card-border-width: initial;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajuste de la imagen al tamaño de la tarjeta */
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px rgba(98,19,51,1);
+    /* Sombra roja al pasar el mouse */
+    transform: scale(1.1);
+    /* Zoom in extra en la imagen al pasar el mouse */
+}
+
+
+
+/*text area */
+/* Estilos específicos para el formulario */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Ajustar la alineación vertical al principio */
+    height: 80vh;
+    /* Altura total del contenedor */
+    margin-top: 50px;
+    /* Espacio adicional en la parte superior */
+}
+
+/*form {
+    width: 50%;
+    /* Ancho del formulario */
+    /*max-width: 400px;
+    /* Ancho máximo del formulario */
+    /*text-align: center;
+    /* Alineación del texto en el formulario 
+}*/
+
+textarea {
+    width: 100%;
+    /* Ancho completo del área de texto */
+    height: 150px;
+    /* Altura del área de texto */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    /* Ancho completo del área de texto */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/* Estilos para el botón */
+.boton-casita {
+    background-color: #0d1013;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-casita i {
+    margin-right: 10px;
+}
+
+/* Estilos para el header */
+header {
+    background-color: rgb(98,19,51);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: x-small;
+
+}
+
+/* Estilos para el contenedor del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* Alinear elementos al inicio y final del contenedor */
+    align-items: center;
+    /* Alinear verticalmente al centro */
+    padding: 10px 20px;
+    /* Espaciado interno del header */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.login-btn {
+    background-color: rgb(98,19,51);
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color de texto blanco */
+    border: none;
+    padding: 30px 35px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: rgb(19, 2, 8);
+    /* Cambiar color al pasar el mouse por encima */
+}
+
+/* Estilos para el icono dentro del botón */
+.login-btn i {
+    margin-right: 5px;
+    /* Espaciado a la derecha del icono */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: rgb(98,19,51);
+    color: #fff;
+    /* Color de texto blanco para contrastar */
+    padding: 10px 0;
+    /* Reducir el espaciado interno del footer */
+    text-align: center;
+    position: fixed;
+    /* Posición fija en la parte inferior de la pantalla */
+    bottom: 0;
+    /* Pegado al borde inferior */
+    width: 100%;
+    /* Ancho completo */
+    margin: 0;
+    /* Resetear márgenes */
+    font-size: 10px;
+    /* Tamaño de letra muy pequeño */
+}
+
+/* Estilos para el contenido del footer */
+.footer-content {
+    max-width: 100%;
+    /* Ancho máximo del contenido del footer */
+    padding: 0 10px;
+    /* Reducir el relleno a los lados para centrar el contenido */
+    box-sizing: border-box;
+    /* Incluir el relleno en el ancho total */
+    margin: 0 auto;
+    /* Centrar el contenido horizontalmente */
+}
+
+.footer-content p {
+    margin: 3px 0;
+    /* Reducir el espaciado entre párrafos dentro del footer */
+    font-size: 10px;
+    /* Tamaño de letra muy pequeño */
+}
+
+
+/* estilo tabla de registros */
+/* Estilos para la tabla de registros */
+.contenedor_tabla {
+    margin: 1.5%;
+    padding: 1.5%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #b0b0b0;
+}
+
+/* Estilos para filas alternas */
+table tbody tr:nth-child(odd) {
+    background-color: #DEDEDE;
+    /* Color de fondo para filas impares */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #C6C6C6;
+    /* Color de fondo para filas pares */
+}
+
+.tabla {
+    width: 100%;
+}
+
+.buttons-excel {
+    background-color: #50182A;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Borde */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Decoración de texto */
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    margin: 4px 2px;
+    /* Margen exterior */
+    cursor: pointer;
+    /* Cursor */
+    border-radius: 4px;
+    /* Radio del borde */
+}
+
+.btn-metricas {
+    background-color: #d07900;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border: none;
+    /* Borde */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: none;
+    /* Decoración de texto */
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    margin: 4px 2px;
+    /* Margen exterior */
+    cursor: pointer;
+    /* Cursor */
+    border-radius: 4px;
+    /* Radio del borde */
+}
+
+
+
+/* pantalla de carga */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(151, 150, 150, 0.97);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 6;
+    /* Aumentar el grosor de la línea */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+    fill: none;
+    stroke: #fb3437;
+    stroke-dasharray: 96, 288;
+    /* Ajustar la longitud del dasharray y el dashoffset */
+    stroke-dashoffset: 384;
+    animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+    72.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
