@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.1/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-    <script src="../js/area_Ambuatory/buttonBack.js"></script>
     
     <script src="../js/validations/sendData.js"></script>
 
@@ -38,7 +37,7 @@
 
     <form id="formHospital" action="../index.php" method="POST">
 
-        <div class="shift" id="shift">
+        <div class="section" id="shift">
             <div class="shiftsContainer">
                 <h2 class="form-title">Turno</h2>
                 <div class="gender-container">
@@ -81,7 +80,7 @@
         </div>
 
 
-        <div class="gender" id="gender">
+        <div class="section" id="gender">
             <div class="gendersContainer">
                 <h2 class="form-title"> Género </h2>
                 <div class="gender-container">
@@ -108,12 +107,12 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="buttongoBackShift()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
             </div>
         </div>
 
 
-        <div class="ageUser" id="ageUser">
+        <div class="section" id="ageUser">
             <div class="agesUserContainer">
                 <h2 class="form-title"> Edad </h2>
                 <div class="age-container">
@@ -147,12 +146,12 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="buttongoBackGender()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
             </div>
         </div>
 
 
-        <div class="satisfaction_attention" id="satisfaction_attention">
+        <div class="section" id="satisfaction_attention">
             <div class="satisfactionAttContainer">
                 <h2 class="form-title"> ¿Qué tan satisfecho quedó con la atención recibida? </h2>
                 <div class="attention-container">
@@ -179,7 +178,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="buttongoBackAge()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
             </div>
         </div>
 

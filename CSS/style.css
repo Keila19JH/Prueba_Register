@@ -89,16 +89,6 @@ h2 {
 
 
 
-#gender, #ageUser, #satisfaction_attention, #timeAtt, #typeService, 
-#tipoConsultaExterna, .consultaExtAdultos, .consultaExtPediatrica, 
-.unidadApoyo, .clinicas, .auxiliares, .DQReceiveAbuse, .typeStaff, 
-.DQTreatmentFriendly, .satisfactionMedicalCare, .nursingSatisfaction, 
-.orientationContinuity, .patientRights, .satisfactionCleaning, 
-.satisfactionExperienceHRAEI, .feedbackSection, 
-.floors, .firstFloor_Service, .secondFloor_Service, .thirdFloor_Service, 
-.fourthFloor_Service, .nurseExplication_care, .satisfaction_foodHospitalization {
-    display: none;
-}
 
 
 .satisfaction_attention.active, 

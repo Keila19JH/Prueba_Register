@@ -8,12 +8,6 @@
     
 
 
-    // Show Pages Sections
-    function showEndSection(){
-        document.getElementById( "shift" ).style.display  = "none";
-        document.getElementById( "feedbackSection" ).style.display = "block";
-    }
-
 
     
     

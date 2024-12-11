@@ -29,7 +29,6 @@ if( $connection ){
 }else{
     echo "Error connecting";
 }
+*/
 
 ?>
-
-*/
