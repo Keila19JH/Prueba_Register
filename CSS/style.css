@@ -87,16 +87,13 @@ h2 {
     margin: .75px;
 }
 
-
-
-
-
-.satisfaction_attention.active, 
-.timeAtt.active {
-    display: block; /* Se muestra solo la activa */
+.section {
+    display: none;
 }
 
-
+#shift {
+    display: block;
+}
 
 .back-button {
     display: block;

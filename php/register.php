@@ -4,22 +4,28 @@
 
     if ( $_SERVER[ "REQUEST_METHOD" ] === "POST" ) {
         
-        $turno_user   = isset( $_POST[ 'turno_user' ] )   ? mysqli_real_escape_string( $connection, $_POST[ 'turno_user' ] ) : null;
-        $genero_user  = isset( $_POST[ 'genero_user' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'genero_user' ] ) : null;
-        $edad_user    = isset( $_POST[ 'edad_user' ] )    ? mysqli_real_escape_string( $connection, $_POST[ 'edad_user' ] ) : null;
+        $turno_user    = isset( $_POST[ 'turno_user' ] )   ? mysqli_real_escape_string( $connection, $_POST[ 'turno_user' ] ) : null;
+        $genero_user   = isset( $_POST[ 'genero_user' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'genero_user' ] ) : null;
+        $edad_user     = isset( $_POST[ 'edad_user' ] )    ? mysqli_real_escape_string( $connection, $_POST[ 'edad_user' ] ) : null;
         $satisfaccion_atencion = isset( $_POST[ 'satisfaccion_atencion' ] ) ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_atencion' ] ) : null;
-        $area         = isset( $_POST[ 'area' ] )         ? $_POST[ 'area' ] : null;
+        $numero_piso   = isset( $_POST[ 'numero_piso' ] )    ? mysqli_real_escape_string( $connection, $_POST[ 'numero_piso' ] ) : null;
+        $servicio_piso = isset( $_POST[ 'servicio_piso' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'servicio_piso' ] ) : null;
+        $maltratoRecibido_personal = isset( $_POST[ 'maltratoRecibido_personal' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'maltratoRecibido_personal' ] ) : null;
+        $area            = isset( $_POST[ 'area' ] ) ? $_POST[ 'area' ] : null;
 
         
         if (!empty( $turno_user )  && 
             !empty( $genero_user ) && 
             !empty( $edad_user )   && 
-            !empty( $satisfaccion_atencion )){
+            !empty( $satisfaccion_atencion ) &&
+            !empty( $numero_piso ) &&
+            !empty( $servicio_piso ) &&
+            !empty( $maltratoRecibido_personal )){
             
             $area_table = $area === "hospitalaria" ? "areas_hospitalarias" : "areas_ambulatorias";
 
-            $query = "INSERT INTO $area_table (turno_user, genero_user, edad_user, satisfaccion_atencion) 
-                      VALUES ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion')";
+            $query = "INSERT INTO $area_table (turno_user, genero_user, edad_user, satisfaccion_atencion, numero_piso, servicio_piso, maltratoRecibido_personal) 
+                      VALUES ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion', '$numero_piso', '$servicio_piso', '$maltratoRecibido_personal')";
 
             if ( mysqli_query( $connection, $query ) ) {
                 echo json_encode( [ "status" => "success", "message" => "Gracias por tomarse el tiempo para compartir sus opiniones.

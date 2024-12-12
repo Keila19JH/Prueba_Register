@@ -1,3 +1,5 @@
+
+
 const sectionHistory = [];
 
 function goBack() {
@@ -17,6 +19,9 @@ $( document ).ready( function() {
         genero_user: null,
         edad_user: null, 
         satisfaccion_atencion: null,
+        numero_piso: null,
+        servicio_piso: null,
+        maltratoRecibido_personal: null,
         area: "hospitalaria",
     };
 
@@ -37,13 +42,57 @@ $( document ).ready( function() {
     });
 
     $( "#ageUser .card" ).on( "click", function() {
-        surveyData.edad_user = $( this ).data( "info" ); // Corregido
+        surveyData.edad_user = $( this ).data( "info" ); 
         navigateSections( "ageUser", "satisfaction_attention" );
+    });
+
+    $( "#satisfaction_attention .card" ).on( "click", function() {
+        surveyData.satisfaccion_atencion = $( this ).data( "info" ); 
+        console.log("Satisfacción de atención seleccionada: ", surveyData.satisfaccion_atencion);
+        navigateSections( "satisfaction_attention", "floors" );
     });
     
 
-    $( "#satisfaction_attention .card" ).on( "click", function() {
-        surveyData.satisfaccion_atencion = $( this ).data( "info" );
+    $( "#floors .card" ).on( "click", function() {
+        surveyData.numero_piso = $( this ).data( "info" );
+        //console.log( "Piso seleccionado:", surveyData.numero_piso );
+        
+        switch (surveyData.numero_piso) {
+            case "Primer piso":
+                navigateSections("floors", "firstFloor_Service");
+            break;
+
+            case "Segundo piso":
+                navigateSections("floors", "secondFloor_Service");
+            break;
+
+            case "Tercer piso":
+                navigateSections("floors", "thirdFloor_Service");
+            break;
+
+            case "Cuarto piso":
+                navigateSections("floors", "fourthFloor_Service");
+            break;
+
+            case "Urgencias":
+                navigateSections("floors", "receiveAbuse"); 
+            break;
+
+            default:
+                Swal.fire("Error", "Piso no válido.", "error");
+        }
+    });
+
+    $( ".section[ id$='Floor_Service' ] .card" ).on( "click", function () {
+       
+        surveyData.servicio_piso = $( this ).data( "info" );
+        //console.log("Servicio seleccionado:", surveyData.servicio_piso);
+        navigateSections( $( this ).closest( ".section" ).attr( "id" ), "receiveAbuse" );
+    });
+    
+    
+    $( "#receiveAbuse .card" ).on( "click", function() {
+        surveyData.maltratoRecibido_personal = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",
