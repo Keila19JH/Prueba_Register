@@ -15,8 +15,10 @@
         $atencion_medico = isset( $_POST[ 'atencion_medico' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'atencion_medico' ] ) : null;
         $explicacion_cuidados = isset( $_POST[ 'explicacion_cuidados' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'explicacion_cuidados' ] ) : null;
         $tramites_continuidad = isset( $_POST[ 'tramites_continuidad' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'tramites_continuidad' ] ) : null;
-
-
+        $derechos_paciente = isset( $_POST[ 'derechos_paciente' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'derechos_paciente' ] ) : null;
+        $satisfaccion_hiegeneHospital = isset( $_POST[ 'satisfaccion_hiegeneHospital' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_hiegeneHospital' ] ) : null;
+        $satisfaccion_comidaHospital  = isset( $_POST[ 'satisfaccion_comidaHospital' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_comidaHospital' ] ) : null;
+        $satisfaccion_HRAEI           = isset( $_POST[ 'satisfaccion_HRAEI' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_HRAEI' ] ) : null;
 
         $area            = isset( $_POST[ 'area' ] ) ? $_POST[ 'area' ] : null;
 
@@ -31,12 +33,16 @@
             !empty( $trato_amable ) &&
             !empty( $atencion_medico ) &&
             !empty( $explicacion_cuidados ) &&
-            !empty( $tramites_continuidad )){
+            !empty( $tramites_continuidad ) &&
+            !empty( $derechos_paciente ) &&
+            !empty( $satisfaccion_hiegeneHospital ) &&
+            !empty( $satisfaccion_comidaHospital ) &&
+            !empty( $satisfaccion_HRAEI )){
             
             $area_table = $area === "hospitalaria" ? "areas_hospitalarias" : "areas_ambulatorias";
 
-            $query = "INSERT INTO $area_table (turno_user, genero_user, edad_user, satisfaccion_atencion, numero_piso, servicio_piso, maltratoRecibido_personal, trato_amable, atencion_medico, explicacion_cuidados, tramites_continuidad) 
-                      VALUES ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion', '$numero_piso', '$servicio_piso', '$maltratoRecibido_personal', '$trato_amable', '$atencion_medico', '$explicacion_cuidados', '$tramites_continuidad')";
+            $query = "INSERT INTO $area_table (turno_user, genero_user, edad_user, satisfaccion_atencion, numero_piso, servicio_piso, maltratoRecibido_personal, trato_amable, atencion_medico, explicacion_cuidados, tramites_continuidad, derechos_paciente, satisfaccion_hiegeneHospital, satisfaccion_comidaHospital, satisfaccion_HRAEI) 
+            VALUES ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion', '$numero_piso', '$servicio_piso', '$maltratoRecibido_personal', '$trato_amable', '$atencion_medico', '$explicacion_cuidados', '$tramites_continuidad', '$derechos_paciente', '$satisfaccion_hiegeneHospital', '$satisfaccion_comidaHospital', '$satisfaccion_HRAEI')";
 
             if ( mysqli_query( $connection, $query ) ) {
                 echo json_encode( [ "status" => "success", "message" => "Gracias por tomarse el tiempo para compartir sus opiniones.

@@ -26,6 +26,10 @@ $( document ).ready( function() {
         atencion_medico: null,
         explicacion_cuidados: null,
         tramites_continuidad: null,
+        derechos_paciente: null,
+        satisfaccion_hiegeneHospital: null,
+        satisfaccion_comidaHospital: null,
+        satisfaccion_HRAEI: null,
         area: "hospitalaria",
     };
 
@@ -133,9 +137,32 @@ $( document ).ready( function() {
     });
 
 
-    
     $( "#orientationContinuity .card" ).on( "click", function() {
-        surveyData.tramites_continuidad = $( this ).data( "info" );
+        surveyData.tramites_continuidad = $( this ).data( "info" ); 
+        navigateSections( "orientationContinuity", "patientRights" );
+    });
+
+
+    $( "#patientRights .card" ).on( "click", function() {
+        surveyData.derechos_paciente = $( this ).data( "info" ); 
+        navigateSections( "patientRights", "satisfactionCleaning" );
+    });
+
+
+    $( "#satisfactionCleaning .card" ).on( "click", function() {
+        surveyData.satisfaccion_hiegeneHospital = $( this ).data( "info" ); 
+        navigateSections( "satisfactionCleaning", "satisfaction_foodHospitalization" );
+    });
+
+    
+    $( "#satisfaction_foodHospitalization .card" ).on( "click", function() {
+        surveyData.satisfaccion_comidaHospital = $( this ).data( "info" ); 
+        navigateSections( "satisfaction_foodHospitalization", "satisfactionExperienceHRAEI" );
+    });
+
+
+    $( "#satisfactionExperienceHRAEI .card" ).on( "click", function() {
+        surveyData.satisfaccion_HRAEI = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",

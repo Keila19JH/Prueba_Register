@@ -642,7 +642,7 @@
                         <div class="card" data-info="Si">
                             <img src="../img/muysatisfecho.png" alt="Si">
                             <div class="card-body" card-info="Si">
-                                <strong> Sí </strong>
+                                <strong> Si </strong>
                             </div>
                         </div>
 
@@ -662,14 +662,14 @@
 
         <div class="section" id="orientationContinuity">
             <div class="questionContainer">
-                <h2 class="form-title"> ¿Recibió orientación por parte del personal sobre los tramites a realizar para la continuidad de su atención? </h2>
+                <h2 class="form-title"> ¿Recibió orientación por parte del personal sobre los trámites a realizar para la continuidad de su atención? </h2>
                 <div class="attention-container">
 
                     <br>
                         <div class="card" data-info="Si">
                             <img src="../img/muysatisfecho.png" alt="Si">
                             <div class="card-body" card-info="Si">
-                                <strong> Sí </strong>
+                                <strong> Si </strong>
                             </div>
                         </div>
 
@@ -687,7 +687,121 @@
         </div>
 
 
-    </form>
+        <div class="section" id="patientRights">
+            <div class="questionContainer">
+                <h2 class="form-title"> ¿Consultaste o te informaron sobre los derechos como paciente? </h2>
+                <div class="attention-container">
 
+                    <br>
+                        <div class="card" data-info="Si">
+                            <img src="../img/muysatisfecho.png" alt="Si">
+                            <div class="card-body" card-info="Si">
+                                <strong> Si </strong>
+                            </div>
+                        </div>
+
+                        <div class="card" data-info="No">
+                            <img src="../img/muyinsatisfecho.png" alt="No">
+                            <div class="card-body" card-info="No">
+                                <strong> No </strong>
+                            </div>
+                        </div>
+                    <br>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="satisfactionCleaning">
+            <div class="satisfactionContainer">
+                <h2 class="form-title"> ¿Qué tan satisfecho esta con la limpieza, higiene e instalaciones del hospital? </h2>
+                <div class="attention-container">
+
+                    <div class="card" data-info="Totalmente Satisfecho">
+                        <img src="../img/totalmentesatisfecho.png" alt="Totalmente Satisfecho">
+                        <div class="card-body" card-info="Totalmente Satisfecho">
+                            <strong> Totalmente Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Satisfecho">
+                        <img src="../img/Satisfecho2.png" alt="Satisfecho">
+                        <div class="card-body" card-info="Satisfecho">
+                            <strong> Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Nada Satisfecho">
+                        <img src="../img/nada.png" alt="Nada Satisfecho">
+                        <div class="card-body" card-info="Nada Satisfecho">
+                            <strong> Nada Satisfecho </strong>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="satisfaction_foodHospitalization">
+            <div class="satisfactionContainer">
+                <h2 class="form-title"> ¿Qué tan satisfecho está con los alimentos otorgados durante su hospitalización? </h2>
+                <div class="attention-container">
+
+                    <div class="card" data-info="Totalmente Satisfecho">
+                        <img src="../img/totalmentesatisfecho.png" alt="Totalmente Satisfecho">
+                        <div class="card-body" card-info="Totalmente Satisfecho">
+                            <strong> Totalmente Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Satisfecho">
+                        <img src="../img/Satisfecho2.png" alt="Satisfecho">
+                        <div class="card-body" card-info="Satisfecho">
+                            <strong> Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Nada Satisfecho">
+                        <img src="../img/nada.png" alt="Nada Satisfecho">
+                        <div class="card-body" card-info="Nada Satisfecho">
+                            <strong> Nada Satisfecho </strong>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+        <div class="section" id="satisfactionExperienceHRAEI">
+            <div class="satisfactionContainer">
+                <h2 class="form-title"> ¿Qué tan satisfecho estás con tu experiencia en el Hospital Regional de Alta Especialidad de Ixtapaluca? </h2>
+                <div class="attention-container">
+
+                    <div class="card" data-info="Totalmente Satisfecho">
+                        <img src="../img/totalmentesatisfecho.png" alt="Totalmente Satisfecho">
+                        <div class="card-body" card-info="Totalmente Satisfecho">
+                            <strong> Totalmente Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Satisfecho">
+                        <img src="../img/Satisfecho2.png" alt="Satisfecho">
+                        <div class="card-body" card-info="Satisfecho">
+                            <strong> Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Nada Satisfecho">
+                        <img src="../img/nada.png" alt="Nada Satisfecho">
+                        <div class="card-body" card-info="Nada Satisfecho">
+                            <strong> Nada Satisfecho </strong>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+    </form>
 </body>
 </html>
