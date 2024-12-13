@@ -453,8 +453,159 @@
 
 
 
+        <div class="section" id="typeStaff">
+            <div class="typeStaffContainer">
+                <h2 class="form-title"> ¿De qué tipo de personal recibió maltrato? </h2>
+                <div class="service-container">
+
+                    <div class="card" data-info="Personal Médico">
+                        <img src="../img/personalmedico.png" alt="Personal Medico">
+                        <div class="card-body" card-info="Personal Medico">
+                            <strong> Personal Médico </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Enfermería">
+                        <img src="../img/enfermeria.png" alt="Personal Enfermeria">
+                        <div class="card-body" card-info="Personal Enfermeria">
+                            <strong> Personal de Enfermería </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Nutrición">
+                        <img src="../img/Personal_Nutricion.png" alt="Personal Nutricion">
+                        <div class="card-body" card-info="Personal Nutricion">
+                            <strong> Personal de Nutrición </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Recepción">
+                        <img src="../img/recepcion.png" alt=" Personal Recepcion ">
+                        <div class="card-body" card-info=" Personal Recepcion ">
+                            <strong> Personal de Recepción </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Trabajo Social">
+                        <img src="../img/trabajosocial.png" alt="Personal TrabajoSocial">
+                        <div class="card-body" card-info="Personal TrabajoSocial">
+                            <strong> Personal de Trabajo Social </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Laboratorio">
+                        <img src="../img/laboratorio1.png" alt="Personal Laboratorio">
+                        <div class="card-body" card-info="Personal Laboratorio">
+                            <strong> Personal de Laboratorio </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Imagen">
+                        <img src="../img/personal_imagen1.png" alt="Personal Imagen">
+                        <div class="card-body" card-info="Personal Imagen">
+                            <strong> Personal de Imagen </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Vigilancia">
+                        <img src="../img/personalvigielancia.png" alt="Personal Vigilancia">
+                        <div class="card-body" card-info="Personal Vigilancia">
+                            <strong> Personal de Vigilancia </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Kiosco">
+                        <img src="../img/personal_kisoko.png" alt="Personal Kiosco">
+                        <div class="card-body" card-info="Personal Kiosco">
+                            <strong> Personal de Kiosco </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Limpieza">
+                        <img src="../img/personal_limpieza.png" alt="Personal Limpieza">
+                        <div class="card-body" card-info="Personal Limpieza">
+                            <strong> Personal de Limpieza </strong>
+                        </div>
+                    </div>
+
+
+                    <div class="card" data-info="Personal de Banco de Sangre">
+                        <img src="../img/personal_banco_Sangre.png" alt="Personal BancoSangre">
+                        <div class="card-body" card-info="Personal BancoSangre">
+                            <strong> Personal de Banco de Sangre </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Quimioterapia">
+                        <img src="../img/Personal_Quimioterapia.png" alt="Personal Quimioterapia">
+                        <div class="card-body" card-info="Personal Quimioterapia">
+                            <strong> Personal de Quimioterapia </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Radioterapia">
+                        <img src="../img/Personal_Radioterapia.png" alt="Personal Radioterapia">
+                        <div class="card-body" card-info="Personal Radioterapia">
+                            <strong> Personal de Radioterapia </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Farmacia">
+                        <img src="../img/Personal_Farmacia.png" alt="Personal Farmacia">
+                        <div class="card-body" card-info="Personal Farmacia">
+                            <strong> Personal de Farmacia </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal de Camilleria">
+                        <img src="../img/Personal_camilleria.png" alt="Personal Camilleria">
+                        <div class="card-body" card-info="Personal Camilleria">
+                            <strong> Personal de Camilleria </strong>
+                        </div>
+                    </div>
+
+                    <div class="card" data-info="Personal Auxiliar">
+                        <img src="../img/Personal_Auxiliar.png" alt="Personal Auxiliar">
+                        <div class="card-body" card-info="Personal Auxiliar">
+                            <strong> Personal Auxiliar </strong>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
 
         
+
+        <div class="section" id="treatmentFriendly">
+            <div class="questionContainer">
+                <h2 class="form-title"> ¿El trato que recibió del personal fue amable y respetuoso? </h2>
+                <div class="attention-container">
+
+                    <br>
+                        <div class="card" data-info="Si">
+                            <img src="../img/muysatisfecho.png" alt="Si">
+                            <div class="card-body" card-info="Si">
+                                <strong> Sí </strong>
+                            </div>
+                        </div>
+
+                        <div class="card" data-info="No">
+                            <img src="../img/muyinsatisfecho.png" alt="No">
+                            <div class="card-body" card-info="No">
+                                <strong> No </strong>
+                            </div>
+                        </div>
+                    <br>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
     </form>
 
 </body>

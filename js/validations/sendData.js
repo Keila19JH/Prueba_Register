@@ -3,12 +3,12 @@
 const sectionHistory = [];
 
 function goBack() {
-    if (sectionHistory.length > 0) {
+    if ( sectionHistory.length > 0 ) {
         const previousSection = sectionHistory.pop(); // Obtener la sección anterior
-        $(".section").hide(); // Ocultar todas las secciones
-        $(`#${previousSection}`).show(); // Mostrar la sección anterior
+        $( ".section" ).hide(); 
+        $( `#${ previousSection }` ).show(); 
     } else {
-        Swal.fire("Aviso", "No puedes regresar más atrás.", "info");
+        Swal.fire( "Aviso", "No puedes regresar más atrás.", "info" );
     }
 }
 
@@ -22,13 +22,14 @@ $( document ).ready( function() {
         numero_piso: null,
         servicio_piso: null,
         maltratoRecibido_personal: null,
+        trato_amable: null,
         area: "hospitalaria",
     };
 
-    function navigateSections(currentSection, nextSection) {
-        $(".section").hide(); // Ocultar todas las secciones
-        $(`#${nextSection}`).show(); // Mostrar la sección siguiente
-        sectionHistory.push(currentSection); // Guardar la sección actual en el historial
+    function navigateSections( currentSection, nextSection ) {
+        $( ".section" ).hide(); 
+        $( `#${ nextSection }` ).show(); 
+        sectionHistory.push( currentSection ); // Guardar section_actual en historial
     }
     
     $( "#shift .card" ).on( "click", function() {
@@ -90,9 +91,28 @@ $( document ).ready( function() {
         navigateSections( $( this ).closest( ".section" ).attr( "id" ), "receiveAbuse" );
     });
     
-    
+
     $( "#receiveAbuse .card" ).on( "click", function() {
-        surveyData.maltratoRecibido_personal = $( this ).data( "info" );
+        const res = $( this ).data( "info" );
+        surveyData.maltratoRecibido_personal = res;
+
+        if( res === "Si" ){
+            navigateSections( "receiveAbuse", "typeStaff" );
+        } else{ 
+            navigateSections( "receiveAbuse", "treatmentFriendly");
+        }
+    });
+
+    $( "#typeStaff .card" ).on( "click", function() {
+        
+        const whatTypeStaff = $( this ).data( "info" );
+        surveyData.maltratoRecibido_personal = whatTypeStaff;
+        navigateSections( "typeStaff", "treatmentFriendly" )
+        
+    });
+    
+    $( "#treatmentFriendly .card" ).on( "click", function() {
+        surveyData.trato_amable = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",
