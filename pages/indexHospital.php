@@ -803,5 +803,23 @@
         </div>
 
     </form>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>Hospital Regional de Alta Especialidad de Ixtapaluca</p>
+            <p>Gestión Digital en Salud - 2024</p>
+        </div>
+    </footer>
+
+
+    <div id="loading-overlay" style="display: none;" class="loading">
+        <svg width="128px" height="96px">
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="back"></polyline>
+            <polyline points="0.157 47.907, 28 47.907, 43.686 96, 86 0, 100 48, 128 48" id="front"></polyline>
+        </svg>
+    </div>
+
+
 </body>
 </html>
