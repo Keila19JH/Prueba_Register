@@ -23,6 +23,9 @@ $( document ).ready( function() {
         servicio_piso: null,
         maltratoRecibido_personal: null,
         trato_amable: null,
+        atencion_medico: null,
+        explicacion_cuidados: null,
+        tramites_continuidad: null,
         area: "hospitalaria",
     };
 
@@ -49,7 +52,7 @@ $( document ).ready( function() {
 
     $( "#satisfaction_attention .card" ).on( "click", function() {
         surveyData.satisfaccion_atencion = $( this ).data( "info" ); 
-        console.log("Satisfacción de atención seleccionada: ", surveyData.satisfaccion_atencion);
+        //console.log("Satisfacción de atención seleccionada: ", surveyData.satisfaccion_atencion);
         navigateSections( "satisfaction_attention", "floors" );
     });
     
@@ -108,11 +111,31 @@ $( document ).ready( function() {
         const whatTypeStaff = $( this ).data( "info" );
         surveyData.maltratoRecibido_personal = whatTypeStaff;
         navigateSections( "typeStaff", "treatmentFriendly" )
-        
+
     });
-    
+
+
     $( "#treatmentFriendly .card" ).on( "click", function() {
-        surveyData.trato_amable = $( this ).data( "info" );
+        surveyData.trato_amable = $( this ).data( "info" ); 
+        navigateSections( "treatmentFriendly", "satisfactionMedicalCare" );
+    });
+
+
+    $( "#satisfactionMedicalCare .card" ).on( "click", function() {
+        surveyData.atencion_medico = $( this ).data( "info" ); 
+        navigateSections( "satisfactionMedicalCare", "nurseExplication_care" );
+    });
+
+
+    $( "#nurseExplication_care .card" ).on( "click", function() {
+        surveyData.explicacion_cuidados = $( this ).data( "info" ); 
+        navigateSections( "nurseExplication_care", "orientationContinuity" );
+    });
+
+
+    
+    $( "#orientationContinuity .card" ).on( "click", function() {
+        surveyData.tramites_continuidad = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",

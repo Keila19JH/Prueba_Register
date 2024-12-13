@@ -576,12 +576,93 @@
             </div>
         </div>
 
-
-        
-
         <div class="section" id="treatmentFriendly">
             <div class="questionContainer">
                 <h2 class="form-title"> ¿El trato que recibió del personal fue amable y respetuoso? </h2>
+                <div class="attention-container">
+
+                    <br>
+                        <div class="card" data-info="Si">
+                            <img src="../img/muysatisfecho.png" alt="Si">
+                            <div class="card-body" card-info="Si">
+                                <strong> Sí </strong>
+                            </div>
+                        </div>
+
+                        <div class="card" data-info="No">
+                            <img src="../img/muyinsatisfecho.png" alt="No">
+                            <div class="card-body" card-info="No">
+                                <strong> No </strong>
+                            </div>
+                        </div>
+                    <br>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="satisfactionMedicalCare">
+            <div class="satisfactionContainer">
+                <h2 class="form-title"> ¿Qué tan satisfecho quedo con la atención del Médico, (le brindo una atención amable y recibió información clara sobre su padecimiento)? </h2>
+                <div class="attention-container">
+
+                    <div class="card" data-info="Totalmente Satisfecho">
+                        <img src="../img/totalmentesatisfecho.png" alt="Totalmente Satisfecho">
+                        <div class="card-body" card-info="Totalmente Satisfecho">
+                            <strong> Totalmente Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Satisfecho">
+                        <img src="../img/Satisfecho2.png" alt="Satisfecho">
+                        <div class="card-body" card-info="Satisfecho">
+                            <strong> Satisfecho </strong>
+                        </div>
+                    </div>
+                    <div class="card" data-info="Nada Satisfecho">
+                        <img src="../img/nada.png" alt="Nada Satisfecho">
+                        <div class="card-body" card-info="Nada Satisfecho">
+                            <strong> Nada Satisfecho </strong>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="nurseExplication_care">
+            <div class="nurseExplicationContainer">
+                <h2 class="form-title"> ¿La explicación que la enfermera le brindó sobre los cuidados que llevara en casa, fue clara y precisa? </h2>
+                <div class="attention-container">
+
+                    <br>
+                        <div class="card" data-info="Si">
+                            <img src="../img/muysatisfecho.png" alt="Si">
+                            <div class="card-body" card-info="Si">
+                                <strong> Sí </strong>
+                            </div>
+                        </div>
+
+                        <div class="card" data-info="No">
+                            <img src="../img/muyinsatisfecho.png" alt="No">
+                            <div class="card-body" card-info="No">
+                                <strong> No </strong>
+                            </div>
+                        </div>
+                    <br>
+
+                </div>
+                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="orientationContinuity">
+            <div class="questionContainer">
+                <h2 class="form-title"> ¿Recibió orientación por parte del personal sobre los tramites a realizar para la continuidad de su atención? </h2>
                 <div class="attention-container">
 
                     <br>
