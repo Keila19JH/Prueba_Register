@@ -59,20 +59,16 @@ $( document ).ready( function() {
         //console.log("Satisfacción de atención seleccionada: ", surveyData.satisfaccion_atencion);
         navigateSections( "timeAtt", "typeService" );
     });
+    
 
-
-    $( "#tipoConsultaExterna_Service .card" ).on( "click", function() {
+    $( "#typeService .card" ).on( "click", function() {
         const selectService = $( this ).data( "info" );
 
         surveyData.nombre_servicio = selectService;
 
         switch ( selectService ) {
-            case "Consulta Externa Adultos":
-                navigateSections("tipoConsultaExterna_Service", "consultaExtAdultos_Service");
-            break;
-
-            case "Consulta Externa Pediátrica":
-                navigateSections("tipoConsultaExterna_Service", "consultaExtPediatrica_Service");
+            case "Consulta Externa":
+                navigateSections( "typeService", "tipoConsultaExterna_Service" )
             break;
 
             case "Unidad de apoyo":
@@ -96,13 +92,36 @@ $( document ).ready( function() {
         }
     });
 
+    $( ".section[ id$='_Service' ] .card" ).on( "click", function () {
 
-    $( "#consultaExtAdultos_Service .card, #consultaExtPediatrica_Service .card" ).on( "click", function () {
-        const selectedInfo = $( this ).data( "info" );
-        surveyData.tipo_servicio = selectedInfo;
-        navigateSections( $( this ).closest( ".section" ).attr( "id" ), "receiveAbuse" );
-    });
+        const selectService  = $( this ).data( "info" );
+        const currentSection = $( this ).closest( ".section" ).attr( "id" );
+        
+        if( currentSection == "tipoConsultaExterna_Service" ){
+
+            surveyData.nombre_servicio = selectService;
+
+            switch ( selectService ){
+                case "Consulta Externa Adultos":
+                    navigateSections("tipoConsultaExterna_Service", "consultaExtAdultos_Service");
+                break;
     
+                case "Consulta Externa Pediátrica":
+                    navigateSections("tipoConsultaExterna_Service", "consultaExtPediatrica_Service");
+                break;
+    
+                default: 
+                    Swal.fire( "Error", "Consulta Externa no válida", "error" );
+            }
+
+        } else {
+            surveyData.tipo_servicio = selectService;
+            navigateSections( currentSection, "receiveAbuse" );
+        }
+
+    });
+
+
 
     $( "#receiveAbuse .card" ).on( "click", function() {
         const res = $( this ).data( "info" );
@@ -130,7 +149,7 @@ $( document ).ready( function() {
     });
     
     $( "#satisfactionMedicalCare .card" ).on( "click", function() {
-        surveyData.nombre_servicio = $( this ).data( "info" );
+        surveyData.atencion_medico = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",
