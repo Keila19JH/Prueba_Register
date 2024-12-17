@@ -805,7 +805,6 @@
 
     </form>
 
-
     <footer>
         <div class="footer-content">
             <p>Hospital Regional de Alta Especialidad de Ixtapaluca</p>

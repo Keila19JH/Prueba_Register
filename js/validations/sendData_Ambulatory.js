@@ -24,8 +24,14 @@ $( document ).ready( function() {
         maltratoRecibido_personal: null,
         trato_amable: null,
         atencion_medico: null,
+        atencion_enfermeria: null,
+        tramites_continuidad: null,
+        derechos_paciente: null,
+        satisfaccion_hiegeneHospital: null,
+        satisfaccion_HRAEI: null,
         area: "ambulatoria",
     };
+
 
     function navigateSections( currentSection, nextSection ) {
         $( ".section" ).hide(); 
@@ -33,26 +39,31 @@ $( document ).ready( function() {
         sectionHistory.push( currentSection ); // Guardar section_actual en historial
     }
     
+
     $( "#shift .card" ).on( "click", function() {
         surveyData.turno_user = $( this ).data( "info" );
         navigateSections( "shift", "gender" );
     });
+
 
     $( "#gender .card" ).on( "click", function() {
         surveyData.genero_user = $( this ).data( "info" );
         navigateSections( "gender", "ageUser" );
     });
 
+
     $( "#ageUser .card" ).on( "click", function() {
         surveyData.edad_user = $( this ).data( "info" ); 
         navigateSections( "ageUser", "satisfaction_attention" );
     });
+
 
     $( "#satisfaction_attention .card" ).on( "click", function() {
         surveyData.satisfaccion_atencion = $( this ).data( "info" ); 
         //console.log("Satisfacción de atención seleccionada: ", surveyData.satisfaccion_atencion);
         navigateSections( "satisfaction_attention", "timeAtt" );
     });
+
 
     $( "#timeAtt .card" ).on( "click", function() {
         surveyData.tiempo_espera = $( this ).data( "info" ); 
@@ -121,8 +132,6 @@ $( document ).ready( function() {
 
     });
 
-
-
     $( "#receiveAbuse .card" ).on( "click", function() {
         const res = $( this ).data( "info" );
         surveyData.maltratoRecibido_personal = res;
@@ -133,6 +142,7 @@ $( document ).ready( function() {
             navigateSections( "receiveAbuse", "treatmentFriendly");
         }
     });
+
 
     $( "#typeStaff .card" ).on( "click", function() {
         
@@ -147,9 +157,39 @@ $( document ).ready( function() {
         surveyData.trato_amable = $( this ).data( "info" ); 
         navigateSections( "treatmentFriendly", "satisfactionMedicalCare" );
     });
-    
+
+
     $( "#satisfactionMedicalCare .card" ).on( "click", function() {
-        surveyData.atencion_medico = $( this ).data( "info" );
+        surveyData.atencion_medico = $( this ).data( "info" ); 
+        navigateSections( "satisfactionMedicalCare", "nursingSatisfaction" );
+    });
+
+
+    $( "#nursingSatisfaction .card" ).on( "click", function() {
+        surveyData.atencion_enfermeria = $( this ).data( "info" ); 
+        navigateSections( "nursingSatisfaction", "orientationContinuity" );
+    });
+
+
+    $( "#orientationContinuity .card" ).on( "click", function() {
+        surveyData.tramites_continuidad = $( this ).data( "info" ); 
+        navigateSections( "orientationContinuity", "patientRights" );
+    });
+
+
+    $( "#patientRights .card" ).on( "click", function() {
+        surveyData.derechos_paciente = $( this ).data( "info" ); 
+        navigateSections( "patientRights", "satisfactionCleaning" );
+    });
+
+    $( "#satisfactionCleaning .card" ).on( "click", function() {
+        surveyData.satisfaccion_hiegeneHospital = $( this ).data( "info" ); 
+        navigateSections( "satisfactionCleaning", "satisfactionExperienceHRAEI" );
+    });
+
+
+    $( "#satisfactionExperienceHRAEI .card" ).on( "click", function() {
+        surveyData.satisfaccion_HRAEI = $( this ).data( "info" );
 
         Swal.fire({
             title:  "Confirmar",

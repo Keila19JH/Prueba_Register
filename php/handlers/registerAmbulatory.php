@@ -14,7 +14,12 @@
         $maltratoRecibido_personal = isset( $_POST[ 'maltratoRecibido_personal' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'maltratoRecibido_personal' ] ) : null;
         $trato_amable    = isset( $_POST[ 'trato_amable' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'trato_amable' ] ) : null;
         $atencion_medico = isset( $_POST[ 'atencion_medico' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'atencion_medico' ] ) : null;
-        
+        $atencion_enfermeria  = isset( $_POST[ 'atencion_enfermeria' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'atencion_enfermeria' ] ) : null;
+        $tramites_continuidad = isset( $_POST[ 'tramites_continuidad' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'tramites_continuidad' ] ) : null;
+        $derechos_paciente    = isset( $_POST[ 'derechos_paciente' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'derechos_paciente' ] ) : null;
+        $satisfaccion_hiegeneHospital    = isset( $_POST[ 'satisfaccion_hiegeneHospital' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_hiegeneHospital' ] ) : null;
+        $satisfaccion_HRAEI    = isset( $_POST[ 'satisfaccion_HRAEI' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_HRAEI' ] ) : null;
+
         if (!empty( $turno_user )  && 
             !empty( $genero_user ) && 
             !empty( $edad_user )   && 
@@ -24,11 +29,21 @@
             !empty( $tipo_servicio ) &&
             !empty( $maltratoRecibido_personal ) &&
             !empty( $trato_amable ) &&
-            !empty( $atencion_medico )){
+            !empty( $atencion_medico ) &&
+            !empty( $atencion_enfermeria ) &&
+            !empty( $tramites_continuidad ) &&
+            !empty( $derechos_paciente ) &&
+            !empty( $satisfaccion_hiegeneHospital ) &&
+            !empty( $satisfaccion_HRAEI )){
 
-            $query = "INSERT INTO areas_ambulatorias(turno_user, genero_user, edad_user, satisfaccion_atencion, tiempo_espera, nombre_servicio, tipo_servicio, maltratoRecibido_personal, trato_amable, atencion_medico)
+            $query = "INSERT INTO 
+                        areas_ambulatorias(turno_user, genero_user, edad_user, satisfaccion_atencion, tiempo_espera, nombre_servicio, 
+                        tipo_servicio, maltratoRecibido_personal, trato_amable, atencion_medico, atencion_enfermeria, tramites_continuidad, 
+                        derechos_paciente, satisfaccion_hiegeneHospital, satisfaccion_HRAEI)
                       VALUES 
-                        ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion', '$tiempo_espera', '$nombre_servicio', '$tipo_servicio', '$maltratoRecibido_personal', '$trato_amable', '$atencion_medico')";
+                        ('$turno_user', '$genero_user', '$edad_user', '$satisfaccion_atencion', '$tiempo_espera', '$nombre_servicio', 
+                        '$tipo_servicio', '$maltratoRecibido_personal', '$trato_amable', '$atencion_medico', '$atencion_enfermeria', 
+                        '$tramites_continuidad', '$derechos_paciente', '$satisfaccion_hiegeneHospital', '$satisfaccion_HRAEI')";
 
             if ( mysqli_query( $connection, $query ) ) {
                 echo json_encode( [ "status" => "success", "message" => "Gracias por tomarse el tiempo para compartir sus opiniones.
