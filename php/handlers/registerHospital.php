@@ -1,6 +1,6 @@
 
 <?php
-    include("connection.php");
+    include("../connection.php");
 
     if ( $_SERVER[ "REQUEST_METHOD" ] === "POST" ) {
         
@@ -19,9 +19,6 @@
         $satisfaccion_hiegeneHospital = isset( $_POST[ 'satisfaccion_hiegeneHospital' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_hiegeneHospital' ] ) : null;
         $satisfaccion_comidaHospital  = isset( $_POST[ 'satisfaccion_comidaHospital' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_comidaHospital' ] ) : null;
         $satisfaccion_HRAEI           = isset( $_POST[ 'satisfaccion_HRAEI' ] )  ? mysqli_real_escape_string( $connection, $_POST[ 'satisfaccion_HRAEI' ] ) : null;
-
-        $area            = isset( $_POST[ 'area' ] ) ? $_POST[ 'area' ] : null;
-
         
         if (!empty( $turno_user )  && 
             !empty( $genero_user ) && 
@@ -38,11 +35,9 @@
             !empty( $satisfaccion_hiegeneHospital ) &&
             !empty( $satisfaccion_comidaHospital ) &&
             !empty( $satisfaccion_HRAEI )){
-            
-            $area_table = $area === "hospitalaria" ? "areas_hospitalarias" : "areas_ambulatorias";
 
             $query = "INSERT INTO 
-                        $area_table (turno_user, genero_user, edad_user, satisfaccion_atencion, numero_piso, servicio_piso, maltratoRecibido_personal, 
+                        areas_hospitalarias (turno_user, genero_user, edad_user, satisfaccion_atencion, numero_piso, servicio_piso, maltratoRecibido_personal, 
                                      trato_amable, atencion_medico, explicacion_cuidados, tramites_continuidad, derechos_paciente, 
                                      satisfaccion_hiegeneHospital, satisfaccion_comidaHospital, satisfaccion_HRAEI) 
                       VALUES 

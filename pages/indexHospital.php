@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../js/validations/sendData.js"></script>
+    <script src="../js/validations/sendData_Hospital.js"></script>
 
 </head>
 
@@ -39,41 +39,41 @@
 
         <div class="section" id="shift">
             <div class="shiftsContainer">
-                <h2 class="form-title">Turno</h2>
+                <h2 class="form-title"> Turno </h2>
                 <div class="gender-container">
 
                     <div class="card" data-info="Matutino">
                         <img src="../img/Matutino.png" alt="Matutino">
                         <div class="card-body" card-info="Matutino">
-                            <strong>Matutino</strong>
+                            <strong> Matutino </strong>
                         </div>
                     </div>
 
                     <div class="card" data-info="Vespertino">
                         <img src="../img/Vespertino.png" alt="Vespertino">
                         <div class="card-body" card-info="Vespertino">
-                            <strong>Vespertino</strong>
+                            <strong> Vespertino </strong>
                         </div>
                     </div>
 
                     <div class="card" data-info="Nocturno">
                         <img src="../img/Nocturno.png" alt="Nocturno">
                         <div class="card-body" card-info="Nocturno">
-                            <strong>Nocturno</strong>
+                            <strong> Nocturno </strong>
                         </div>
                     </div>
 
                     <div class="card" data-info="Fin de semana">
                         <img src="../img/Fin.png" alt="Fin de semana">
                         <div class="card-body" card-info="Fin de semana">
-                            <strong>Fin de semana</strong>
+                            <strong> Fin de semana </strong>
                         </div>
                     </div>
 
                 </div>
 
                 <a href="../index.php#section1">
-                    <button type="button" class="back-button">Regresar</button>
+                    <button type="button" class="back-button"> Regresar </button>
                 </a>
 
             </div>
@@ -88,26 +88,26 @@
                     <div class="card" data-info="Masculino">
                         <img src="../img/hombre.png" alt="Masculino">
                         <div class="card-body" card-info="Masculino">
-                            <strong>Masculino</strong>
+                            <strong> Masculino </strong>
                         </div>                       
                     </div>
                                 
                     <div class="card" data-info="Femenino">
                         <img src="../img/mujer.png" alt="Femenino">
                         <div class="card-body" card-info="Femenino">
-                            <strong>Femenino</strong>
+                            <strong> Femenino </strong>
                         </div>
                     </div>
                                         
                     <div class="card" data-info="Otro">
                         <img src="../img/otro.png" alt="Otro">
                         <div class="card-body" card-info="Otro">
-                            <strong>Otro</strong>
+                            <strong> Otro </strong>
                         </div>       
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -120,33 +120,33 @@
                     <div class="card" data-info="Menor de 18 años">
                         <img src="../img/niño.png" alt="Menor de 18 años">
                         <div class="card-body" card-info="Menor de 18 años">
-                            <strong>Igual o menor de 18 años</strong>
+                            <strong> Igual o menor de 18 años </strong>
                         </div>
                     </div>
 
                     <div class="card" data-info="Entre 19 y 30 años">
                         <img src="../img/joven.png" alt="Entre 19 y 30 años">
                         <div class="card-body" card-info="Entre 19 y 30 años">
-                            <strong>Entre 19 y 30 años</strong>
+                            <strong> Entre 19 y 30 años </strong>
                         </div>
                     </div>
                     
                     <div class="card" data-info="Entre 31 y 49 años">
                         <img src="../img/adulto1.png" alt="Entre 31 y 49 años">
                         <div class="card-body" card-info="Entre 31 y 49 años">
-                            <strong>Entre 31 y 49 años</strong>
+                            <strong> Entre 31 y 49 años </strong>
                         </div>
                     </div>
 
                     <div class="card" data-info="Entre 50 y 65 años">
                         <img src="../img/viejito.png" alt="Entre 50 y 65 años">
                         <div class="card-body" card-info="Entre 50 y 65 años">
-                            <strong>Entre 50 y 65 años</strong>
+                            <strong> Entre 50 y 65 años </strong>
                         </div>
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -178,7 +178,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -223,7 +223,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
         
@@ -312,7 +312,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -365,7 +365,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -405,7 +405,7 @@
                     </div> 
                     
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -422,7 +422,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -447,10 +447,9 @@
                     <br>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
-
 
 
         <div class="section" id="typeStaff">
@@ -572,9 +571,11 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
+
+        
 
         <div class="section" id="treatmentFriendly">
             <div class="questionContainer">
@@ -598,7 +599,7 @@
                     <br>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -628,7 +629,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -655,7 +656,7 @@
                     <br>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -682,7 +683,7 @@
                     <br>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -709,7 +710,7 @@
                     <br>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -739,7 +740,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -769,7 +770,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 
@@ -798,7 +799,7 @@
                     </div>
 
                 </div>
-                <button type="button" onclick="goBack()" class="back-button">Regresar</button>
+                <button type="button" onclick="goBack()" class="back-button"> Regresar </button>
             </div>
         </div>
 

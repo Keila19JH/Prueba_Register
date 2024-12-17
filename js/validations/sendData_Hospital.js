@@ -177,7 +177,7 @@ $( document ).ready( function() {
                 console.log( surveyData );
 
                 $.ajax({
-                    url: "../php/register.php",
+                    url: "../php/handlers/registerHospital.php",
                     method: "POST",
                     data: surveyData,
                     dataType: "json",
